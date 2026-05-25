@@ -3,11 +3,11 @@ import tkinter as tk
 from tkinter import messagebox, simpledialog
 import os
 
-# ------------------ FILE PATH ------------------
+# PATH
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, "parking_data.json")
 
-# ------------------ FILE HANDLING ------------------
+# FILE HANDLING 
 def sync_spots_with_users(data):
     used_spots = {user["spot"] for user in data["users"]}
     for spot in data["spots"]:
@@ -27,7 +27,7 @@ def save_data(data):
     with open(DATA_FILE, "w") as file:
         json.dump(data, file, indent=4)
 
-# ------------------ USER FUNCTIONS ------------------
+# USER FUNCTIONS
 def add_user(data, name, plate):
     name = name.strip()
     plate = plate.strip()
@@ -97,7 +97,7 @@ def search_users(data, query):
     ]
     return "\n".join(result) if result else "No matching results."
 
-# ------------------ SPOT FUNCTIONS ------------------
+# SPOT FUNCTIONS
 def add_spot(data, spot_number):
     spot_number = spot_number.strip()
 
@@ -154,7 +154,7 @@ def view_spots(data, is_admin):
 
     return "\n".join(lines)
 
-# ------------------ GUI ------------------
+# GUI
 def start_gui(is_admin):
     data = load_data()
 
@@ -251,7 +251,7 @@ def start_gui(is_admin):
 
     root.mainloop()
 
-# ------------------ LOGIN ------------------
+# LOGIN 
 def login_gui():
     win = tk.Tk()
     win.title("Login")

@@ -1,0 +1,33 @@
+{
+    "users": [
+        {
+            "name": "Example",
+            "plate": "123ABC",
+            "spot": "1"
+        },
+        {
+            "name": "Example2",
+            "plate": "456XYZ",
+            "spot": "2"
+        },
+        {
+            "name": "Example",
+            "plate": "789GHT",
+            "spot": "3"
+        }
+    ],
+    "spots": [
+        {
+            "number": "1",
+            "occupied": true
+        },
+        {
+            "number": "2",
+            "occupied": true
+        },
+        {
+            "number": "3",
+            "occupied": true
+        }
+    ]
+}

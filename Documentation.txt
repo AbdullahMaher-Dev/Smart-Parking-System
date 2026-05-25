@@ -1,0 +1,61 @@
+
+                                                                                                                                        🅿️ Parking Management System (GUI-Based)
+
+                                                                                                                                                                     📌 Overview
+                                                                                                  A simple parking lot management system with graphical interface using Python and Tkinter.
+                                                                                            It allows different operations for admin and user roles and stores all data persistently in a JSON file.
+
+🔐 Login Roles
+Username | Password | Permissions
+---------|----------|------------
+admin    | 1234     | Full Access (cars + spots)
+user     | 0000     | Limited Access (cars only)
+
+✅ Functionalities
+
+👥 User Module (Accessible by All)
+- Add Car: Park a new car into the first available spot.
+- Edit Car: Update name or plate of a parked car.
+- Delete Car: Remove a car and free its spot.
+- View Cars: Show all parked cars.
+- Search Cars: Search cars by name or plate number.
+- View Spots: Shows only status of spots (without user details).
+
+🛠️ Admin Module (Accessible by Admin Only)
+- Manage Spots: Add, Delete, or Edit parking spots.
+- View Spots: Shows full spot info including which user occupies each.
+
+🔍 Search & Filter
+- Enter part of a name or plate to find matching records.
+- Case-insensitive search.
+
+⚙️ Data Handling
+- Data is loaded from and saved to parking_data.json.
+- Changes (add, edit, delete) are saved automatically when exiting the app.
+
+🧠 Advanced Features
+- Role-based interface (user vs admin).
+- Input validation: Prevents empty or duplicate inputs.
+- GUI login system using Tkinter.
+- Uses:
+  - Lists and Dictionaries
+  - File I/O (JSON)
+  - Functions and modular design
+
+🆕 New Features Implemented
+1. Parking Ticket Message on successful car addition.
+2. Spot linking with car and automatic status update.
+3. Admin spot visibility (can see who is in each spot).
+4. Duplicate checking for both car plate and spot number.
+5. Separate lists for users and spots in JSON for better organization.
+
+📁 File Structure
+project_folder/
+├── parking_data.json        # Contains users and spots
+└── main.py                  # Full project code with GUI
+
+🧪 Run Instructions
+1. Ensure Python is installed (>=3.6).
+2. Run the file main.py.
+3. Use the login window to enter credentials.
+4. Interact via the GUI.
